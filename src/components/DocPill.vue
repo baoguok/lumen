@@ -41,6 +41,7 @@ const pill = defineProps<Pill>()
 }
 
 .vp-doc td > .link {
+  transform: translateY(1.75px);
   font-size: 1em;
 }
 
@@ -49,7 +50,11 @@ const pill = defineProps<Pill>()
   align-items: center;
   gap: 0.25em;
   transform: translateY(1px);
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   margin: 0 0.125em;
   border: 1px solid var(--Pill-border);
   border-radius: 0.5em;
